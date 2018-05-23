@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Remus
 LIBS:SolderStation-cache
 EELAYER 25 0
 EELAYER END
@@ -46,33 +47,38 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L ATMEGA16U2-AU U?
-U 1 1 5AFFEF87
-P 4750 3650
-F 0 "U?" H 3900 5000 50  0000 C CNN
-F 1 "ATMEGA16U2-AU" H 5500 2300 50  0000 C CNN
-F 2 "TQFP-32" H 4600 3700 50  0001 C CNN
-F 3 "http://www.atmel.com/Images/doc7799.pdf" H 4850 2200 50  0001 C CNN
-	1    4750 3650
-	1    0    0    -1  
-$EndComp
-Text HLabel 1150 1000 0    60   Output ~ 0
-PWM_Ch1
-Text HLabel 1150 1100 0    60   Output ~ 0
-PWM_Ch2
-Text HLabel 1150 1200 0    60   Output ~ 0
-PWM_Ch3
-Text HLabel 1150 1300 0    60   Input ~ 0
-TC+_Ch1
-Text HLabel 1150 1400 0    60   Input ~ 0
-TC-_Ch1
-Text HLabel 1150 1500 0    60   Input ~ 0
-TC+_Ch2
-Text HLabel 1150 1600 0    60   Input ~ 0
-TC-_Ch2
-Text HLabel 1150 1700 0    60   Input ~ 0
-TC+_Ch3
-Text HLabel 1150 1800 0    60   Input ~ 0
-TC-_Ch3
+Wire Notes Line
+	5200 2200 8000 2200
+Wire Notes Line
+	8000 2200 8000 4350
+Wire Notes Line
+	8000 4350 5200 4350
+Wire Notes Line
+	5200 4350 5200 2200
+Text Notes 6150 3300 0    60   ~ 0
+Microcontroller
+Text HLabel 5200 2500 0    60   Output ~ 0
+Ch1_PWM
+Text HLabel 5200 2650 0    60   Output ~ 0
+Ch2_PWM
+Text HLabel 5200 2800 0    60   Output ~ 0
+Ch3_PWM
+Text Notes 5250 3250 0    60   ~ 0
+~RESET~
+Text HLabel 5200 3200 0    60   Input ~ 0
+PG
+Text HLabel 5200 3550 0    60   Input ~ 0
+~CS~
+Text HLabel 5200 3650 0    60   Input ~ 0
+CLK
+Text HLabel 5200 3750 0    60   Input ~ 0
+Ch1_TEMP
+Text HLabel 5200 3850 0    60   Input ~ 0
+Ch2_TEMP
+Text HLabel 5200 3950 0    60   Input ~ 0
+Ch3_TEMP
+Text HLabel 6550 2150 0    60   Input ~ 0
+3V3
+Text HLabel 6550 4400 0    60   Input ~ 0
+GND
 $EndSCHEMATC
